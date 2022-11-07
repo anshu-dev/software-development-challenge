@@ -25,11 +25,6 @@ function TransactionMilestone() {
     setTotalAmount(value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("sdasdas", numMilestones, totalAmount, milestones);
-  };
-
   useEffect(() => {
     if (totalAmount && numMilestones) {
       let amountPerMilestone = (totalAmount / numMilestones).toFixed(2);
@@ -51,7 +46,7 @@ function TransactionMilestone() {
         <b>Transaction Milestone</b>
       </h4>
       <div className="container mb-4" style={{ boxSizing: "border-box" }}>
-        <Form onSubmit={(e) => handleSubmit(e)}>
+        <Form >
           <div className="container">
             <Row className="p-2 my-2">
               <Col className="text-start">
